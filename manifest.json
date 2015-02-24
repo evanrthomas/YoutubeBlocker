@@ -1,0 +1,26 @@
+{
+  "name": "Youtube Blocker",
+  "description": "Blocks Youtube recommended",
+  "version": "0.2",
+
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "http://www.youtube.com/*"],
+      "css": [],
+      "js": ["content.js"]
+
+    }
+  ],
+
+  "background" : {
+    "scripts": ["popup.js"]
+  },
+
+ "browser_action": {
+    "default_icon":"youtube-icon.png",  // optional
+    "default_title": "Youtube Blocker", // optional; shown in tooltip
+    "default_popup": "popup.html"       // optional
+  },
+  "manifest_version": 2
+}
+
